@@ -38,8 +38,10 @@ def f(ys):
     return t
 
 ys = [-1.0] + np.random.random_sample(100)
-sol = optimize.minimize(f,ys)
+#sol = optimize.minimize(f,ys)
+sol = optimize.basinhopping(f,ys,niter = 100)
 print(sol)
+print(sol.fun)
 xs = np.linspace(0, 300.0 ,ys.size + 2)
 plt.plot(xs,np.concatenate(([0],sol.x,[0])),'-')
 plt.axhline(y=0,color='g')
