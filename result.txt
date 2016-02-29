@@ -1,0 +1,3 @@
+10000pts -> 4.4sec
+10pts, basin -> 4.8sec
+100pts, basin -> 4.47sec
